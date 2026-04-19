@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev - Giriş</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <img src="bg.jpg" class="background-image" alt="Background">
+
+    <div class="container">
+        
+        <div class="panel-left">
+            <img src="logo.png" class="logo" alt="Sunucu Logosu">
+            <h1>dev</h1>
+            <p>test devoloper</p>
+            
+            <div class="nav-icons">
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/discord-new-logo.png" alt="Discord"></a>
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/steam.png" alt="Steam"></a>
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube"></a>
+            </div>
+        </div>
+
+        <div class="panel-right">
+            <h3>Bağlantı Durumu</h3>
+            <ul>
+                <li><span class="status-icon green">●</span> Sunucuya Bağlanılıyor...</li>
+                <li><span class="status-icon yellow">●</span> Veriler Senkronize Ediliyor...</li>
+                <li><span class="status-icon gray">●</span> Karakter Yükleniyor...</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+        <p>Yükleniyor... <span id="progress-percent">0</span>%</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
