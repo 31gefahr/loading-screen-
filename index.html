@@ -1,57 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 <body>
-    <div class="background-overlay"></div>
-
-    <div class="loadscreen-container">
-        
-        <div class="top-section">
-            <div class="header-left">
-                <p>TDS // AE DEV <span class="discord-link">discord.gg/AE DEVt</span></p>
-                <p class="server-rule">Sunucu kurallarını kabul etmiş sayılırsınız.</p>
+    <div id="wrapper">
+        <div class="content">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@17caponemk" target="_blank" class="icon-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                </a>
+                
+                <a href="https://discord.gg/AJtPxr4p" target="_blank" class="icon-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
+                </a>
             </div>
-            <div class="header-right">
-                <p>YETKİLİ EKİP</p>
-                <p class="owner-name">GEFAHR <span class="owner-rank">OWNER</span></p>
-            </div>
-        </div>
 
-        <div class="middle-section"></div>
-
-        <div class="bottom-section">
-            
-            <div class="bottom-left">
-                <p>SOSYAL MEDYA BAĞLANTILARI</p>
-                <p class="social-item">DISCORD /</p>
-                <p class="social-item">TIKTOK /AE DEV</p>
-                <p class="social-item">INSTAGRAM /AE DEV</p>
-                <p class="social-item">YOUTUBE /AE DEV</p>
-            </div>
-            
-            <div class="bottom-middle">
-                <p>MÜZİK</p>
-                <div class="music-info">
-                    <p>Müzik: <span id="music-name">Awaiting...</span></p>
-                    <p>Albüm: <span id="album-name">TDS Sounds</span></p>
+            <div class="footer">
+                <div class="status">
+                    <span>YÜKLENİYOR...</span>
+                    <span id="percent">0%</span>
                 </div>
-            </div>
-            
-            <div class="bottom-right">
-                <p>FiveM^ (b2829)</p>
-                <p>YÜKLENİYOR... <span id="progress-percent">0%</span></p>
-            </div>
-        </div>
-
-        <div class="loading-bar-wrapper">
-            <div class="loading-bar-full">
-                <div class="loading-bar-fill" style="width: 0%;"></div>
+                <div class="bar-container">
+                    <div id="progress-bar"></div>
+                </div>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
