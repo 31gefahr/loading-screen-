@@ -1,14 +1,24 @@
 window.addEventListener('message', function(event) {
     if (event.data.type === 'loadProgress') {
+        let progress = Math.round(event.data.loadFraction * 100);
         
-        let percent = Math.round(event.data.loadFraction * 100);
-        
-        
-        document.querySelector('.loading-bar-fill').style.width = percent + '%';
-        document.getElementById('progress-percent').innerHTML = percent + '%';
+        document.getElementById('progress-bar').style.width = progress + '%';
+        document.getElementById('percent').innerText = progress + '%';
+
+        if (progress >= 100) {
+            setTimeout(() => {
+                
+                if (typeof invokeNative !== 'undefined') {
+                    invokeNative('shutdownLoadingScreen');
+                }
+            }, 800);
+        }
     }
 });
 
 
-document.getElementById('music-name').innerHTML = "No Music";
-document.getElementById('album-name').innerHTML = "TDS Sounds";
+document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+        
+    }
+});
