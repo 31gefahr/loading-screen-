@@ -8,12 +8,11 @@ body { margin: 0; padding: 0; overflow: hidden; background: url('bg.jpg') no-rep
 .social-links { display: flex; gap: 20px; }
 .icon-btn img { 
     width: 50px; height: 50px; 
-    filter: invert(1);
+    filter: invert(1); 
     transition: 0.3s; 
     cursor: pointer !important; 
 }
 .icon-btn:hover img { transform: scale(1.2); filter: invert(1) drop-shadow(0 0 10px #00ffcc); }
-
 
 .footer { width: 100%; }
 .status { display: flex; justify-content: space-between; color: white; font-family: sans-serif; font-weight: bold; margin-bottom: 10px; }
