@@ -11,14 +11,7 @@ window.addEventListener('message', function(event) {
                 if (typeof invokeNative !== 'undefined') {
                     invokeNative('shutdownLoadingScreen');
                 }
-            }, 800);
+            }, 500);
         }
-    }
-});
-
-
-document.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A') {
-        
     }
 });
