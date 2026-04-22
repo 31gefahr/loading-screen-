@@ -1,20 +1,45 @@
-body { margin: 0; padding: 0; overflow: hidden; background: url('bg.jpg') no-repeat center center fixed; background-size: cover; cursor: default; }
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;600&display=swap');
 
-#wrapper { width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
-
-.content { width: 90%; height: 90%; display: flex; flex-direction: column; justify-content: space-between; }
-
-
-.social-links { display: flex; gap: 20px; }
-.icon-btn img { 
-    width: 50px; height: 50px; 
-    filter: invert(1); 
-    transition: 0.3s; 
-    cursor: pointer !important; 
+body {
+    margin: 0; padding: 0; overflow: hidden;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
-.icon-btn:hover img { transform: scale(1.2); filter: invert(1) drop-shadow(0 0 10px #00ffcc); }
 
-.footer { width: 100%; }
-.status { display: flex; justify-content: space-between; color: white; font-family: sans-serif; font-weight: bold; margin-bottom: 10px; }
-.bar-container { width: 100%; height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
-#progress-bar { width: 0%; height: 100%; background: #00ffcc; box-shadow: 0 0 15px #00ffcc; transition: 0.4s; }
+
+.overlay {
+    position: fixed; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: -1;
+}
+
+#loading-screen {
+    width: 100vw; height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    padding: 60px; box-sizing: border-box;
+}
+
+
+header { display: flex; justify-content: space-between; align-items: flex-start; }
+h1 { font-family: 'Syncopate', sans-serif; font-size: 50px; margin: 0; letter-spacing: -2px; }
+.glitch-text { color: #00ffcc; font-size: 12px; font-weight: 800; letter-spacing: 3px; }
+
+
+.socials { display: flex; gap: 30px; }
+.icon-link {
+    text-decoration: none; color: #fff; font-size: 14px; font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px;
+    transition: 0.3s; cursor: pointer !important;
+}
+.icon-link:hover { background: #fff; color: #000; box-shadow: 0 0 20px #fff; }
+
+
+footer { width: 100%; }
+.load-info { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 12px; font-weight: bold; color: #888; }
+#percent { color: #00ffcc; font-size: 24px; }
+
+.progress-wrapper { width: 100%; height: 2px; background: rgba(255,255,255,0.05); }
+#progress-bar { width: 0%; height: 100%; background: #00ffcc; box-shadow: 0 0 15px #00ffcc; transition: 0.4s ease-out; }
