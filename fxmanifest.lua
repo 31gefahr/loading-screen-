@@ -1,12 +1,12 @@
 fx_version 'cerulean'
 game 'gta5'
 
-loadscreen_manual_shutdown 'yes' 
+-
+loadscreen_manual_shutdown 'yes'
+ui_page_cursor 'yes'
+
 ui_page 'index.html'
 loadscreen 'index.html'
-
-
-ui_page_cursor 'yes'
 
 files {
     'index.html',
