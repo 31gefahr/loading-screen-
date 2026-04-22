@@ -5,28 +5,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
-        <div class="content">
-            <div class="social-links">
-                <a href="https://www.youtube.com/@KANAL_LINKIN" target="_blank" class="icon-btn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-                </a>
-                
-                <a href="https://discord.gg/AJtPxr4p" target="_blank" class="icon-btn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
-                </a>
+    <div id="loading-screen">
+        <div class="overlay"></div>
+        
+        <header>
+            <div class="server-meta">
+                <span class="glitch-text">// SYSTEM_REBOOT</span>
+                <h1>SERVER NAME</h1>
             </div>
+            <div class="socials">
+                <a href="https://youtube.com/Kanalin" target="_blank" class="icon-link">YOUTUBE</a>
+                <a href="https://discord.gg/Davetin" target="_blank" class="icon-link">DISCORD</a>
+            </div>
+        </header>
 
-            <div class="footer">
-                <div class="status">
-                    <span>YÜKLENİYOR...</span>
-                    <span id="percent">0%</span>
-                </div>
-                <div class="bar-container">
-                    <div id="progress-bar"></div>
-                </div>
+        <footer>
+            <div class="load-info">
+                <span id="load-status">INITIALIZING ASSETS...</span>
+                <span id="percent">0%</span>
             </div>
-        </div>
+            <div class="progress-wrapper">
+                <div id="progress-bar"></div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
