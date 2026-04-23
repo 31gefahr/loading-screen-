@@ -1,9 +1,10 @@
 let songs = ["media/music1.mp3", "media/music2.mp3"];
 let currentSong = 0;
 let audio = document.getElementById("audio");
+let volumeSlider = document.getElementById("volume");
 
 
-audio.volume = 0.5;
+audio.volume = volumeSlider.value;
 
 function togglePlay() {
     if (audio.paused) {
@@ -17,20 +18,24 @@ function togglePlay() {
 
 function nextTrack() {
     currentSong = (currentSong + 1) % songs.length;
-    audio.src = songs[currentSong];
-    audio.play().catch(e => console.log("Hata:", e));
-    updateText();
+    loadAndPlay();
 }
 
 function prevTrack() {
     currentSong = (currentSong - 1 + songs.length) % songs.length;
-    audio.src = songs[currentSong];
-    audio.play().catch(e => console.log("Hata:", e));
-    updateText();
+    loadAndPlay();
 }
 
 function changeVolume(val) {
     audio.volume = val;
+}
+
+function loadAndPlay() {
+    audio.src = songs[currentSong];
+    audio.play().catch(e => console.log("Hata:", e));
+    updateText();
+   
+    document.getElementById("play-pause").innerHTML = "⏸";
 }
 
 function updateText() {
@@ -54,12 +59,20 @@ window.addEventListener('message', function(event) {
 
 window.addEventListener('load', () => {
    
+    audio.play().then(() => {
+        
+        document.getElementById("play-pause").innerHTML = "⏸";
+    }).catch(error => {
+        console.log("Autoplay engellendi. Tıklama bekleniyor.", error);
+    });
+
+   
     document.addEventListener('click', () => {
         if (audio.paused) {
             audio.play().then(() => {
                 document.getElementById("play-pause").innerHTML = "⏸";
-            }).catch(error => {
-                console.log("Müzik çalma hatası:", error);
+            }).catch(e => {
+                console.log("Müzik çalma hatası:", e);
             });
         }
     }, { once: true }); 
