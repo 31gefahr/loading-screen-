@@ -1,9 +1,9 @@
-Citizen.CreateThread(function()
-    while not NetworkIsSessionStarted() do
-        Wait(500)
+AddEventHandler('onClientResourceStart', function (resourceName)
+    if (GetCurrentResourceName() ~= resourceName) then
+        return
     end
+
+    print('Yükleme ekranı tamamlandı')
     
-    Wait(500)
-    ShutdownLoadingScreen()
-    ShutdownLoadingScreenNui()
+    
 end)
