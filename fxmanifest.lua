@@ -1,10 +1,13 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'gefahr'
+author 'Gemini'
 description 'Loading Screen'
 
 loadscreen 'index.html'
+loadscreen_cursor 'yes' 
+
+client_script 'client.lua'
 
 files {
     'index.html',
