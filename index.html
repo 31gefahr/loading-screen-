@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="overlay"></div>
-        
-        <header>
-            <div class="server-meta">
-                <span class="glitch-text">// SYSTEM_REBOOT</span>
-                <h1>SERVER NAME</h1>
-            </div>
-            <div class="socials">
-                <a href="https://youtube.com/Kanalin" target="_blank" class="icon-link">YOUTUBE</a>
-                <a href="https://discord.gg/Davetin" target="_blank" class="icon-link">DISCORD</a>
-            </div>
-        </header>
+    <div class="overlay"></div>
+    <div class="background" style="background-image: url('media/bg.jpg');"></div>
 
-        <footer>
-            <div class="load-info">
-                <span id="load-status">INITIALIZING ASSETS...</span>
-                <span id="percent">0%</span>
-            </div>
-            <div class="progress-wrapper">
-                <div id="progress-bar"></div>
-            </div>
-        </footer>
+    <div class="header">
+        <h1>YOUR SERVER NAME</h1>
+        <p>ESTABLISHED IN 2026</p>
     </div>
+
+    <div class="right-panels">
+        <div class="panel">
+            <span class="badge info">INFO</span>
+            <h3>Sunucu Kuralları</h3>
+            <p>Rol kalitesini artırmak için kurallara uyunuz.</p>
+        </div>
+        <div class="panel">
+            <span class="badge ann">ANNOUNCEMENTS</span>
+            <h3>Güncelleme v1.2</h3>
+            <p>MADE BY GEFAHR17</p>
+        </div>
+    </div>
+
+    <div class="music-player">
+        <div class="track-info">
+            <p id="now-playing">NOW PLAYING: Music 1</p>
+        </div>
+        <div class="controls">
+            <button onclick="prevTrack()">⏮</button>
+            <button id="play-pause" onclick="togglePlay()">⏸</button>
+            <button onclick="nextTrack()">⏭</button>
+        </div>
+        <div class="volume-control">
+            <span>🔈</span>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5" onchange="changeVolume(this.value)">
+            <span>🔊</span>
+        </div>
+    </div>
+
+    <div class="load-container">
+        <div class="percentage"><span id="percent">0</span>% <small>LOADING CLIENT FILES...</small></div>
+        <div class="progress-bg">
+            <div id="progress-bar"></div>
+        </div>
+        <div class="status-text">INITIALIZING SCRIPTS...</div>
+    </div>
+
+    <audio id="audio" src="media/music1.mp3" autoplay></audio>
     <script src="script.js"></script>
 </body>
 </html>
