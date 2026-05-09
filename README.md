@@ -1,4 +1,4 @@
-https://discord.gg/tFs7w7Sp destek için / for support
+destek için / for support
 gefahr17_ my discord accaount
 
 
